@@ -23,8 +23,6 @@ A simple sidebar implementation with toggle functionality, developed using HTML,
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Sidebar Toggle</title>
-
-    <script src="scriptSubLink.js"></script>
 </head>
 <body>
 
@@ -40,7 +38,7 @@ A simple sidebar implementation with toggle functionality, developed using HTML,
         <!-- Main content goes here -->
     </div>
 
-    <script src="scriptSideBar.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 ```
