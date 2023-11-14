@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <script src="scriptSubLink.js"></script>
+    <!-- Script para revelar e esconder os sub links das opções -->
+</head>
+
+<body onmousemove="handleMouseMove(event)">
+    <i class="show-sidebar-icon fas fa-arrow-alt-circle-right" onclick="showSidebar()"></i>
+
+    <div class="sidebar sidebar-closed" onmouseleave="handleMouseLeave()">
+        <div class="sidebar">
+            <div class="user-info">
+                <div class="username">
+                    <img src="imagens/user.png" alt="Ícone de Usuario"> Nome do Usuário
+                </div>
+            </div>
+
+            <div class="service-link" onclick="toggleSubLinks('opcaoSubLinks')">
+                <img src="imagens/opcao.png" alt="Ícone de Opção">
+                Opção 1
+            </div>
+            <div id="opcaoSubLinks" class="sub-links">
+
+                <a href="#">
+                    <img src="imagens/opcao.png" alt="Ícone de Opção">Opção 1.1
+                </a><br><br>
+
+                <a href="#">
+                    <img src="imagens/opcao.png" alt="Ícone de Opção">Opção 1.2
+                </a><br><br>
+
+                <a href="#">
+                    <img src="imagens/opcao.png" alt="Ícone de Opção">Opção 1.3
+                </a><br><br>
+
+                <a href="#">
+                    <img src="imagens/opcao.png" alt="Ícone de Opção">Opção 1.4
+                </a><br><br>
+                <!-- Adicione os outros sublinks associados a Opção 1 -->
+            </div>
+
+
+            <a class="service-link" href="#">
+                <img src="imagens/opcao.png" alt="Ícone de Opção">
+                Opção 2
+            </a>
+
+            <a class="service-link" href="#">
+                <img src="imagens/opcao.png" alt="Ícone de Opção">
+                Opção 3
+            </a>
+
+
+            <a class="service-link" href="#">
+                <img src="imagens/opcao.png" alt="Ícone de Opção">
+                Opção 4
+            </a>
+
+        </div>
+
+        <div class="main-content" onmouseenter="handleMouseEnter()">
+        </div>
+
+        <script src="scriptSideBar.js"></script>
+        <!-- Script para exibir a side bar ao passar o mouse  -->
+</body>
+
+</html>

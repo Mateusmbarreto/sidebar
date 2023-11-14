@@ -1,0 +1,186 @@
+body {
+  font-family: "Bahnschrift", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("imagens/wallpaper.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 190px;
+  background-color: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  /* Isso permite que a barra lateral tenha uma rolagem vertical */
+  max-height: 100%;
+  /* Defina a altura máxima da barra lateral para ocupar 100% da altura da tela */
+  scrollbar-width: thin;
+  /* Define a largura da barra de rolagem para "thin" (fina) */
+}
+
+.show-sidebar-icon {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar-closed {
+  transform: translateX(-190px);
+  /* Oculta a barra lateral */
+}
+
+.user-info,
+.logout {
+  padding: 20px;
+}
+
+.username {
+  color: #000;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.username img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.logout {
+  margin-top: 20px;
+}
+
+.main-content {
+  margin-left: 0;
+  /* O conteúdo principal ocupa a tela inteira inicialmente */
+  width: 100%;
+  background: url("lflogo.png") no-repeat center center;
+  background-size: cover;
+  transition: margin-left 0.3s ease;
+}
+
+.service-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #f4f4f4;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.service-link:hover {
+  background-color: #e0e0e0;
+}
+
+.service-link:active {
+  animation: pulse 0.3s linear;
+}
+
+.service-link img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.sub-links {
+  display: none;
+  align-items: center;
+  padding: 5px 10px;
+  /* Reduzindo o padding */
+  margin: 5px;
+  /* Diminuindo a margem */
+  background-color: #f4f4f4;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 13px;
+  /* Diminuindo o tamanho da fonte */
+}
+
+.sub-links a {
+  text-decoration: none;
+  /* Remove o sublinhado */
+  color: #000;
+  /* Define a cor do texto para preto */
+}
+
+.sub-links a:hover {
+  background-color: #e0e0e0;
+  color: #000;
+  /* Cor do texto no hover para preto */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 13px;
+  /* Aumentar o tamanho da fonte */
+  font-weight: bold;
+  padding: 8px 0px;
+  /* Ajustar o padding */
+}
+
+.sub-links a img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.sub-links a:active {
+  animation: pulse 0.3s linear;
+}
+
+/* Estilização da barra de rolagem no Chrome */
+.sidebar::-webkit-scrollbar {
+  width: 3.5px;
+  /* Largura da barra de rolagem */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Cor do fundo da área da barra de rolagem */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Cor do indicador da barra de rolagem */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
